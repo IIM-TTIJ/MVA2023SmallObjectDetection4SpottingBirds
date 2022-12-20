@@ -36,18 +36,11 @@ cd MVA2023BirdDetection
 pip install -v -e .
 ```
 
-### Drone Dataset and Evaluation metrics
+### Drone Dataset 
 The training data can be downloaded from [here](https://github.com/kakitamedia/drone_dataset).
 We prepare a script [`dowload_and_prepare_drone_dataset.sh'](dowload_and_prepare_drone_dataset) to automatically download the dataset, transfer the annotation to coco format, 
 merge the three classes ('hawk', 'crow', 'wild bird') into one ('bird'). The script can also merge  
 the train/val to a single train set.
-
-The evaluation in this repository is based on COCO mAP.  
-The [COCO API](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
-The evaluation of the MVA2023 Challenge on Small Bird Detection competition is based on AP0.5.
-We think that using the official COCO mAP is good for developing your method as metrics such as AP0.5, AP0.75, AP_samll 
-are also reported, so we keep it here.
-
 
 To run the script, 
 ```
@@ -65,6 +58,15 @@ out_path data/drone/annotation/train_coco.json
 out_path data/drone/annotation/train_mini_coco.json
 data/drone/annotation/train_val_coco_merged.json 48395 images 62106 boxes
 ```
+
+
+### Evaluation metrics
+The evaluation in this repository is based on COCO mAP.  
+The [COCO API](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
+The evaluation of the MVA2023 Challenge on Small Bird Detection competition is based on AP0.5.
+We think that using the official COCO mAP is good for developing your method as metrics such as AP0.5, AP0.75, AP_samll 
+are also reported, so we keep it here.
+
 
 ### Commands to run the code
 
