@@ -17,9 +17,8 @@ conda create -n mva python=3.7
 conda activate mva
 ```
 
-**Step 1.** Install PyTorch following [official instructions](https://pytorch.org/get-started/locally/), e.g.
+**Step 1.** Install PyTorch following [official instructions](https://pytorch.org/get-started/locally/)
 
-On GPU platforms:
 
 ```shell
 conda install pytorch torchvision -c pytorch
@@ -29,9 +28,9 @@ conda install pytorch torchvision -c pytorch
 ```shell
 pip install -U openmim
 mim install mmcv-full
-
+```
 **Step 3.** Install our baseline code
-
+```shell
 git clone https://github.com/cyoukaikai/MVA2023BirdDetection.git
 cd MVA2023BirdDetection
 pip install -v -e .
@@ -39,9 +38,33 @@ pip install -v -e .
 
 ### Drone Dataset and Evaluation metrics
 The training data can be downloaded from [here](https://github.com/kakitamedia/drone_dataset).
-The evaluation is based on mAP@(0.25, 0.5, 0.75).
-The [COCO API](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
+We prepare a script [`dowload_and_prepare_drone_dataset.sh'](dowload_and_prepare_drone_dataset) to automatically download the dataset, transfer the annotation to coco format, 
+merge the three classes ('hawk', 'crow', 'wild bird') into one ('bird'). The script can also merge  
+the train/val to a single train set.
 
+The evaluation in this repository is based on COCO mAP.  
+The [COCO API](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
+The evaluation of the MVA2023 Challenge on Small Bird Detection competition is based on AP0.5.
+We think that using the official COCO mAP is good for developing your method as metrics such as AP0.5, AP0.75, AP_samll 
+are also reported, so we keep it here.
+
+
+To run the script, 
+```
+./dowload_and_prepare_drone_dataset.sh
+
+```
+
+Some output after running the script,
+```
+data/drone/annotation/val.json 5605 images 10070 boxes
+out_path data/drone/annotation/val_coco.json
+out_path data/drone/annotation/val_mini_coco.json
+data/drone/annotation/train.json 42790 images 52036 boxes
+out_path data/drone/annotation/train_coco.json
+out_path data/drone/annotation/train_mini_coco.json
+data/drone/annotation/train_val_coco_merged.json 48395 images 62106 boxes
+```
 
 ### Commands to run the code
 
@@ -49,6 +72,13 @@ We used CenterNet (backbone ResNet18) in the baseline and obtained mAP 47.3.
 With hard negative training for additional 20 epochs, mAP was improved to 51.0. 
 
 We have prepared the commands for conducting the distributed training and test in [`dist_train_test.sh`](dist_train_test.sh).
+
+A sample results for submission is `smaple_submission.zip`. 
+To submit your detection result, first generate `results.json' (other name is not acceptable so that
+our Server can automatically evaluate your submission), then compress your `results.json' to a zip file (any name is OK, e.g., 
+submit.zip)
+
+
 
 ```shell
 #!/usr/bin/env bash
