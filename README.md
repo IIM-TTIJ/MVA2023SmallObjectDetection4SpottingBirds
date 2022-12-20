@@ -1,6 +1,6 @@
 # MVA2023 - Small Object Detection for Birds Challenge 
 
-This repository includes the baseline code used in the challenge.
+This repository includes the baseline code used in our [challenge](http://www.mva-org.jp/mva2023/challenge) .
 It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is downloaded from [here](https://github.com/open-mmlab/mmdetection/releases/tag/v2.24.1).
 For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetection), 
 
@@ -63,7 +63,7 @@ data/drone/annotation/train_val_coco_merged.json 48395 images 62106 boxes
 ### Evaluation metrics
 The evaluation in this repository is based on COCO mAP.  
 The [COCO API](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
-The evaluation of the MVA2023 Challenge on Small Bird Detection competition is based on AP0.5.
+The evaluation of the [MVA2023 Challenge on Small Bird Detection competition](http://www.mva-org.jp/mva2023/challenge) is based on AP0.5.
 We think that using the official COCO mAP is good for developing your method as metrics such as AP0.5, AP0.75, AP_samll 
 are also reported, so we keep it here.
 
