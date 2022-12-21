@@ -5,6 +5,11 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetection), 
 
 
+
+## News
+[2022/12/21]: Our code is available!
+
+
 ### Installation
 
 We follow the [MMDetection Installation Website](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation)
@@ -38,7 +43,7 @@ pip install -v -e .
 
 ### Drone Dataset 
 The training data can be downloaded from [here](https://github.com/kakitamedia/drone_dataset).
-We prepare a script [`dowload_and_prepare_drone_dataset.sh'](dowload_and_prepare_drone_dataset) to automatically download the dataset, transfer the annotation to coco format, 
+We prepare a script [`dowload_and_prepare_drone_dataset.sh'](dowload_and_prepare_drone_dataset.sh) to automatically download the dataset, transfer the annotation to coco format, 
 merge the three classes ('hawk', 'crow', 'wild bird') into one ('bird'). The script can also merge  
 the train/val to a single train set.
 
