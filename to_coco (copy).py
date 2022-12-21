@@ -30,24 +30,20 @@ def get_image_size(image_path):
     width, height = imagesize.get(image_path)
     return height, width
 
-
 def main():
     assert os.path.isdir(ANNOTATION_DIR)
 
     train_json_file = os.path.join(ANNOTATION_DIR, 'train.json')
     val_json_file = os.path.join(ANNOTATION_DIR, 'val.json')
 
-    merged_output_file = os.path.join(ANNOTATION_DIR, 'merged_train.json')
     merged_ret = {'images': [], 'annotations': [], 'categories': categories_info}
     # Transfer the annotation to coco format, and generate mini version for each of them for easy debugging of your own
     # detection method.
     for input_file in [val_json_file, train_json_file]:
         _, old_ext = os.path.splitext(input_file)
-        # new_ext = '_coco.json'
-        # output_file = 'split_' + input_file.replace(old_ext, new_ext, 1)
-        # mini_output_file = 'split_' + input_file.replace(old_ext, f'_mini{new_ext}', 1)
-        output_file = 'split_' + input_file
-        mini_output_file = 'split_' + input_file + f'_mini{old_ext}'
+        new_ext = '_coco.json'
+        output_file = input_file.replace(old_ext, new_ext, 1)
+        mini_output_file = input_file.replace(old_ext, f'_mini{new_ext}', 1)
 
         ret = {'images': [], 'annotations': [], 'categories': categories_info}
 
@@ -129,12 +125,10 @@ def main():
     # ==========================================
     # merge the train and val data into a single file if you like
     # ================================
-
+    merged_output_file = os.path.join(ANNOTATION_DIR, 'train_val_coco_merged.json')
     json.dump(merged_ret, open(merged_output_file, 'w'))
     print('{} {} images {} boxes'.format(
         merged_output_file, len(merged_ret['images']), len(merged_ret['annotations'])))
-
-
 
 
 if __name__ == '__main__':

@@ -17,4 +17,6 @@ mv annotation data/drone/.
 pip install imagesize
 python to_coco.py
 
-
+mkdir data/drone/annotation/deprecated
+mv data/drone/annotation/train.json  data/drone/annotation/deprecated/.
+mv data/drone/annotation/val.json  data/drone/annotation/deprecated/.
