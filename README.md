@@ -7,7 +7,7 @@ For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetectio
 
 
 ## News
-[2022/12/21]: This is a test.
+[2022/12/23] Our code is available.
 
 
 ### Installation
