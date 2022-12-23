@@ -41,27 +41,31 @@ pip install -v -e .
 ```
 
 ### Drone Dataset 
-The training data can be downloaded from [here](https://github.com/kakitamedia/drone_dataset).
-We prepare a script [`dowload_and_prepare_drone_dataset.sh'](dowload_and_prepare_drone_dataset.sh) to automatically download the dataset, transfer the annotation to coco format, 
-merge the three classes ('hawk', 'crow', 'wild bird') into one ('bird'). The script can also merge  
-the train/val to a single train set.
+To run this competition, we extended the [drone dataset](https://github.com/kakitamedia/drone_dataset). 
+We collected new images and conducted annotations, the validation data and test data are from
+the newly collected data. 
+The training images can be downloaded from [here](https://drive.google.com/file/d/10_gyG5GQLNRX89SUuSG1xy8MSUlbNwzv/view).
+Please put it at `data/drone/` after you download and uncompress it.
 
-To run the script, 
-```
-./dowload_and_prepare_drone_dataset.sh
 
-```
+We provided the annotations in `data/drone/annotations` for the training images.
 
-Some output after running the script,
 ```
 data/drone/annotation/val.json 5605 images 10070 boxes
-out_path data/drone/annotation/val_coco.json
-out_path data/drone/annotation/val_mini_coco.json
+out_path data/drone/annotation/split_val_coco.json
+out_path data/drone/annotation/split_val_mini_coco.json
 data/drone/annotation/train.json 42790 images 52036 boxes
-out_path data/drone/annotation/train_coco.json
-out_path data/drone/annotation/train_mini_coco.json
-data/drone/annotation/train_val_coco_merged.json 48395 images 62106 boxes
+out_path data/drone/annotation/split_train_coco.json
+out_path data/drone/annotation/split_train_mini_coco.json
+data/drone/annotation/merged_train.json 48395 images 62106 boxes
 ```
+`merged_train.json` is the merged annotation of the original drone dataset, which will be used as training 
+set for this competition. 
+`split_train_coco.json` and `split_val_coco.json` corresponds to the original train/val split in the original drone dataset. 
+`split_train_mini_coco.json` and `split_val_mini_coco.json` can be used to debug your method.
+
+The annotations we provided transfer the annotations in the original drone dataset to coco format, and merge the three classes ('hawk', 'crow', 'wild bird') into one ('bird'). 
+
 
 
 ### Evaluation metrics
