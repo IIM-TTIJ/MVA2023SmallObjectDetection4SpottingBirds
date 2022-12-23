@@ -42,13 +42,13 @@ pip install -v -e .
 
 ### Drone Dataset 
 To run this competition, we extended the [drone dataset](https://github.com/kakitamedia/drone_dataset). 
-We collected new images and conducted annotations, the validation data and test data are from
+We collected new images and conducted annotation, the validation data and test data are from
 the newly collected data. 
 The training images can be downloaded from [here](https://drive.google.com/file/d/10_gyG5GQLNRX89SUuSG1xy8MSUlbNwzv/view).
 Please put it at `data/drone/` after you download and uncompress it.
 
 
-We provided the annotations in `data/drone/annotations` for the training images.
+We provided the annotation in `data/drone/annotation` for the training images.
 
 ```
 data/drone/annotation/val.json 5605 images 10070 boxes
@@ -59,12 +59,12 @@ out_path data/drone/annotation/split_train_coco.json
 out_path data/drone/annotation/split_train_mini_coco.json
 data/drone/annotation/merged_train.json 48395 images 62106 boxes
 ```
-`merged_train.json` is the merged annotation of the original drone dataset, which will be used as training 
+`merged_train.json` is the merged annotation of the original drone dataset, which will be used as the training 
 set for this competition. 
-`split_train_coco.json` and `split_val_coco.json` corresponds to the original train/val split in the original drone dataset. 
+`split_train_coco.json` and `split_val_coco.json` correspond to the original train/val splits in the original drone dataset. 
 `split_train_mini_coco.json` and `split_val_mini_coco.json` can be used to debug your method.
 
-The annotations we provided transfer the annotations in the original drone dataset to coco format, and merge the three classes ('hawk', 'crow', 'wild bird') into one ('bird'). 
+The annotation we provided transfer the annotation in the original drone dataset to coco format, and merge the three classes ('hawk', 'crow', 'wild bird') to one ('bird'). 
 
 
 

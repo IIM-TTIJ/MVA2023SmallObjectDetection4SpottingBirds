@@ -38,10 +38,10 @@ data = dict(
         pipeline=train_pipeline
     ),
     val=dict(
-        ann_file=data_root + 'annotation/val_coco.json',
+        ann_file=data_root + 'annotation/split_val_coco.json',
     ),
     test=dict(
-        ann_file=data_root + 'annotation/val_coco.json',
+        ann_file=data_root + 'annotation/split_val_coco.json',
     )
 )
 
