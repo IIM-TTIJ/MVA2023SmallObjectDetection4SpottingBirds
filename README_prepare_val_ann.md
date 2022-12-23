@@ -13,7 +13,7 @@ val_json_file = os.path.join(ANNOTATION_DIR, 'val.json')
 #######################################
 
 ```
-Here `val.json` is you old annotation file in [Akita-san's format](https://github.com/kakitamedia/drone_dataset). 
+Here `val.json` is the old annotation file in [Akita-san's format](https://github.com/kakitamedia/drone_dataset). 
 
 
 Then, 
