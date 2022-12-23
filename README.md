@@ -7,7 +7,7 @@ For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetectio
 
 
 ## News
-[2022/12/21]: Our code is available!
+[2022/12/21]: This is a test.
 
 
 ### Installation
@@ -24,10 +24,9 @@ conda activate mva
 
 **Step 1.** Install PyTorch following [official instructions](https://pytorch.org/get-started/locally/)
 
+We tested our code on `pytorch-1.10.2` and `pytorch-1.12.1`, please feel free to use other PyTorch versions.
 
-```shell
-conda install pytorch torchvision -c pytorch
-```
+
 **Step 2.** Install [MMCV](https://github.com/open-mmlab/mmcv) using [MIM](https://github.com/open-mmlab/mim).
 
 ```shell
@@ -36,7 +35,7 @@ mim install mmcv-full
 ```
 **Step 3.** Install our baseline code
 ```shell
-git clone https://github.com/cyoukaikai/MVA2023BirdDetection.git
+git clone https://github.com/IIM-TTIJ/MVA2023BirdDetection.git
 cd MVA2023BirdDetection
 pip install -v -e .
 ```
