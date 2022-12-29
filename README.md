@@ -1,5 +1,8 @@
 # MVA2023 - Small Object Detection for Birds Challenge 
 
+<img src="http://www.mva-org.jp/mva2023/data/uploads/bird/samples-1.pdf.jpg" alt="mva-sod4b-sample" title="mva2023-ChallengeOnSmallObjectDetection4Birds-sample">
+
+
 This repository includes the baseline code used in our [challenge](http://www.mva-org.jp/mva2023/challenge) .
 It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is downloaded from [here](https://github.com/open-mmlab/mmdetection/releases/tag/v2.24.1).
 For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetection), 
