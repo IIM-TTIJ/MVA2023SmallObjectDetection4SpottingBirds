@@ -7,9 +7,20 @@ This repository includes the baseline code used in our [challenge](http://www.mv
 It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is downloaded from [here](https://github.com/open-mmlab/mmdetection/releases/tag/v2.24.1).
 For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetection), 
 
-
+### Important dates
+|  Challenges Event  |  Date (always 23:59 PST)  |
+| ---- | ---- |
+| [Site online](http://www.mva-org.jp/mva2023/challenge) | 2022.12.8 |
+| Release of training data and validation data | 2023.1.9 |
+| Validation server online | 2023.1.10 |
+| Validation server closed | 2023.4.14 |
+| Fact sheets, code/executable submission deadline | 2023.4.21 |
+| Paper submission deadline (only Research Category) | 2023.5.7 |
+| Preliminary test results release to the participants | 2023.6.15 |
+| Camera ready due (only Research Category) | 2023.7.4 |
 
 ## News
+[2022/12/29] Important dates, Links and References are available.  
 [2022/12/23] Our code is available.
 
 
@@ -156,9 +167,12 @@ bash tools/dist_test.sh \
 ```
 
 
+## Links
+* [MVA Official Competition Site](http://www.mva-org.jp/mva2023/challenge)
+* CodaLab (to be announced)
+* Dataset Download Link (to be announced)
 
-
-### References 
+## Citation
 
 ```
 @misc{sodbchallenge2023misc,
@@ -175,3 +189,6 @@ note={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
 year={2023}}
 
 ```
+
+## References
+* https://github.com/kuanhungchen/awesome-tiny-object-detection
