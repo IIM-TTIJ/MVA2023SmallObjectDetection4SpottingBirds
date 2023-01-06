@@ -170,7 +170,7 @@ bash tools/dist_test.sh \
 ## Links
 * [MVA Official Competition Site](http://www.mva-org.jp/mva2023/challenge)
 * CodaLab (to be announced)
-* Dataset Download Link (to be announced)
+* Competiton Validation Dataset Download Link (to be announced)
 
 ## Citation
 
