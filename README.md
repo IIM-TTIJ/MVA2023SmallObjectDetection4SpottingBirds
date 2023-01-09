@@ -83,7 +83,8 @@ year={2023}}
 
 ## About baseline code
 
-This code was created with reference to MMDetection[3].
+This code was created with reference to MMDetection[3]. 
+OpenMMLab provides a [Colab tutorial](https://github.com/open-mmlab/mmdetection/blob/master/demo/MMDet_Tutorial.ipynb).
 ### Installation
 
 We follow the [MMDetection Installation Website](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation)
