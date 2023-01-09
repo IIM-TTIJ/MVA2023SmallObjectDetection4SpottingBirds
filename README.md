@@ -11,19 +11,77 @@ For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetectio
 |  Challenges Event  |  Date (always 23:59 PST)  |
 | ---- | ---- |
 | [Site online](http://www.mva-org.jp/mva2023/challenge) | 2022.12.8 |
-| Release of training data and validation data | <s>2023.1.9</s><br>2023.1.10 |
-| Validation server online | 2023.1.10 |
-| Validation server closed | 2023.4.14 |
+| Release of training data and public test data | <s>2023.1.9</s><br>2023.1.10 |
+| Public test server online | 2023.1.10 |
+| Public test server closed | 2023.4.14 |
 | Fact sheets, code/executable submission deadline | 2023.4.21 |
 | Paper submission deadline (only Research Category) | 2023.5.7 |
-| Preliminary test results release to the participants | 2023.6.15 |
+| Preliminary private test results release to the participants | 2023.6.15 |
 | Camera ready due (only Research Category) | 2023.7.4 |
 
 ## News
 [2022/12/29] Important dates, Links and References are available.  
 [2022/12/23] Our code is available.
 
+## Dataset
+**[Download Link(TBA)]()**  
 
+Dataset Directory Structure
+```
+data
+ ├ drone2021
+ │  ├ images
+ │  └ annotations
+ ├ mva2023_sod4bird_train
+ │  ├ images
+ │  └ annotations
+ ├ mva2023_sod4bird_pub_test
+ │  ├ images
+ │  └ annotations(empty)
+ └ mva2023_sod4bird_private_test
+    ├ images(empty)
+    └ annotations(empty)
+```
+
+The dataset is split into training / public test / private test sets. Participants can download the images and annotations of the training data, and the images of the public test data. The annotations of the public test data are hidden but the participants can obtain the evaluation score once their detection results are online submitted via the **CodaLab web platform**. Participants cannot access the private test images. The private test will be conducted manually by the challenge organizer. The trainig data includes an extended version of the publicly available data (train1) published in [4] and newly released data for this competition (train2).
+* Images and instances:
+    * Train :
+        * Train1[[2]](https://github.com/kakitamedia/drone_dataset) (drone2021): Consists of approximately 50,000 images with about 60,000 annotated bird instances.
+        * Train2 (mva2023_sod4bird_train): Consists of approximately 10,000 images with about 40,000 annotated bird instances.
+    * Public test (mva2023_sod4bird_pub_test) : Consists of approximately 10,000 images with about 40,000 annotated bird instances.
+    * Private test (mva2023_sod4bird_private_test): Consists of approximately 10,000 images with about 40,000 annotated bird instances.
+* Data format :
+    * Input : Image
+    * Annotation : COCO format
+
+After the challenge, the public test evaluation server will continue to run on CodaLab to promote further research on small object detection.
+
+
+## Links
+* [MVA Official Competition Site](http://www.mva-org.jp/mva2023/challenge)
+* CodaLab (to be announced)
+* Competiton train and public test Dataset Download Link (to be announced)
+
+## Citation
+
+```
+@misc{sodbchallenge2023misc,
+title={Small Object Detection for Birds Challenge 2023},
+author={Yuki Kondo, Norimichi Ukita},
+howpublished={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
+year={2023}}
+
+@inproceedings{sodbchallenge2023},
+title={Small Object Detection for Birds Challenge 2023},
+author={Yuki Kondo, Norimichi Ukita, [Winners]},
+booktitle={International Conference on Machine Vision and Applications},
+note={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
+year={2023}}
+
+```
+
+
+## About baseline code
 ### Installation
 
 We follow the [MMDetection Installation Website](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation)
@@ -49,42 +107,30 @@ mim install mmcv-full
 ```
 **Step 3.** Install our baseline code
 ```shell
-git clone https://github.com/IIM-TTIJ/MVA2023BirdDetection.git
+git clone https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4Birds.git
 cd MVA2023BirdDetection
 pip install -v -e .
 ```
 
-### Drone Dataset 
-To run this competition, we extended the [drone dataset](https://github.com/kakitamedia/drone_dataset). 
-We collected new images and conducted annotation, the validation data and test data are from
-the newly collected data. 
-The training images can be downloaded from [here](https://drive.google.com/file/d/10_gyG5GQLNRX89SUuSG1xy8MSUlbNwzv/view).
-Please put it at `data/drone/` after you download and uncompress it.
 
+### Dataset 
+**Download Link(TBA)**  
+Please put it at `data/` after you download and uncompress it.
 
-We provided the annotation in `data/drone/annotation` for the training images.
-
+Directory Structure
 ```
-data/drone/annotation/val.json 5605 images 10070 boxes
-out_path data/drone/annotation/split_val_coco.json
-out_path data/drone/annotation/split_val_mini_coco.json
-data/drone/annotation/train.json 42790 images 52036 boxes
-out_path data/drone/annotation/split_train_coco.json
-out_path data/drone/annotation/split_train_mini_coco.json
-data/drone/annotation/merged_train.json 48395 images 62106 boxes
+data
+ ├ drone2021
+ ├ mva2023_sod4bird_train
+ ├ mva2023_sod4bird_pub_test
+ └ mva2023_sod4bird_private_test
 ```
-`merged_train.json` is the merged annotation of the original drone dataset, which will be used as the training 
-set for this competition. 
-`split_train_coco.json` and `split_val_coco.json` correspond to the original train/val splits in the original drone dataset. 
-`split_train_mini_coco.json` and `split_val_mini_coco.json` can be used to debug your method.
-
-The annotation we provided transfer the annotation in the original drone dataset to coco format, and merge the three classes ('hawk', 'crow', 'wild bird') to one ('bird'). 
 
 
 
 ### Evaluation metrics
 The evaluation in this repository is based on COCO mAP.  
-The [COCO API](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
+The [COCO API[3]](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
 The evaluation of the [MVA2023 Challenge on Small Bird Detection competition](http://www.mva-org.jp/mva2023/challenge) is based on AP0.5.
 We think that using the official COCO mAP is good for developing your method as metrics such as AP0.5, AP0.75, AP_samll 
 are also reported, so we keep it here.
@@ -163,32 +209,9 @@ bash tools/dist_test.sh \
     --eval-options jsonfile_prefix=results
 
 
-
-```
-
-
-## Links
-* [MVA Official Competition Site](http://www.mva-org.jp/mva2023/challenge)
-* CodaLab (to be announced)
-* Competiton Validation Dataset Download Link (to be announced)
-
-## Citation
-
-```
-@misc{sodbchallenge2023misc,
-title={Small Object Detection for Birds Challenge 2023},
-author={Yuki Kondo, Norimichi Ukita},
-howpublished={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
-year={2023}}
-
-@inproceedings{sodbchallenge2023},
-title={Small Object Detection for Birds Challenge 2023},
-author={Yuki Kondo, Norimichi Ukita, [Winners]},
-booktitle={International Conference on Machine Vision and Applications},
-note={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
-year={2023}}
-
 ```
 
 ## References
-* https://github.com/kuanhungchen/awesome-tiny-object-detection
+[1] https://github.com/kuanhungchen/awesome-tiny-object-detection  
+[2] https://github.com/kakitamedia/drone_dataset  
+[3] https://github.com/cocodataset/cocoapi
