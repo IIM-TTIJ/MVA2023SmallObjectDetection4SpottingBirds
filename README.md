@@ -11,7 +11,7 @@ For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetectio
 |  Challenges Event  |  Date (always 23:59 PST)  |
 | ---- | ---- |
 | [Site online](http://www.mva-org.jp/mva2023/challenge) | 2022.12.8 |
-| Release of training data and public test data | <s>2023.1.9</s><br>2023.1.10 |
+| Release of training data and public test data | 2023.1.9 |
 | Public test server online | 2023.1.10 |
 | Public test server closed | 2023.4.14 |
 | Fact sheets, code/executable submission deadline | 2023.4.21 |
