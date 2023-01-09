@@ -12,20 +12,19 @@ For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetectio
 | ---- | ---- |
 | [Site online](http://www.mva-org.jp/mva2023/challenge) | 2022.12.8 |
 | Release of training data and public test data | <s>2023.1.9</s><br>2023.1.10 |
-| Validation server online | 2023.1.10 |
-| Validation server closed | 2023.4.14 |
+| Public test server online | 2023.1.10 |
+| Public test server closed | 2023.4.14 |
 | Fact sheets, code/executable submission deadline | 2023.4.21 |
 | Paper submission deadline (only Research Category) | 2023.5.7 |
-| Preliminary test results release to the participants | 2023.6.15 |
+| Preliminary private test results release to the participants | 2023.6.15 |
 | Camera ready due (only Research Category) | 2023.7.4 |
 
 ## News
-[2023/01/10] Release of training data and public test data.  
 [2022/12/29] Important dates, Links and References are available.  
 [2022/12/23] Our code is available.
 
 ## Dataset
-**[Download Link]()**  
+**[Download Link(TBA)]()**  
 
 Dataset Directory Structure
 ```
@@ -61,7 +60,7 @@ After the challenge, the public test evaluation server will continue to run on C
 ## Links
 * [MVA Official Competition Site](http://www.mva-org.jp/mva2023/challenge)
 * CodaLab (to be announced)
-* Competiton Validation Dataset Download Link (to be announced)
+* Competiton train and public test Dataset Download Link (to be announced)
 
 ## Citation
 
@@ -115,7 +114,7 @@ pip install -v -e .
 
 
 ### Dataset 
-**Download Link**  
+**Download Link(TBA)**  
 Please put it at `data/` after you download and uncompress it.
 
 Directory Structure
@@ -131,7 +130,7 @@ data
 
 ### Evaluation metrics
 The evaluation in this repository is based on COCO mAP.  
-The [COCO API](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
+The [COCO API[3]](https://github.com/cocodataset/cocoapi) is used to evaluate the detection results.
 The evaluation of the [MVA2023 Challenge on Small Bird Detection competition](http://www.mva-org.jp/mva2023/challenge) is based on AP0.5.
 We think that using the official COCO mAP is good for developing your method as metrics such as AP0.5, AP0.75, AP_samll 
 are also reported, so we keep it here.
@@ -213,5 +212,6 @@ bash tools/dist_test.sh \
 ```
 
 ## References
-[1] https://github.com/kuanhungchen/awesome-tiny-object-detection
-[2] https://github.com/kakitamedia/drone_dataset
+[1] https://github.com/kuanhungchen/awesome-tiny-object-detection  
+[2] https://github.com/kakitamedia/drone_dataset  
+[3] https://github.com/cocodataset/cocoapi
