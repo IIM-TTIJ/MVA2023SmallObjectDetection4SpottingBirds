@@ -215,6 +215,6 @@ bash tools/dist_test.sh \
 
 ## References
 [1] Hank Chen, Awesome Tiny Object Detection, https://github.com/kuanhungchen/awesome-tiny-object-detection  
-[2] Fujii, Sanae, Kazutoshi Akita, and Norimichi Ukita. "Distant Bird Detection for Safe Drone Flight and Its Dataset." 2021 17th International Conference on Machine Vision and Applications (MVA). IEEE, 2021.   
-[3] Chen, Kai, et al. "MMDetection: Open mmlab detection toolbox and benchmark." arXiv preprint arXiv:1906.07155 (2019).  
+[2] Fujii, Sanae, Kazutoshi Akita, and Norimichi Ukita. "Distant Bird Detection for Safe Drone Flight and Its Dataset." 2021 17th International Conference on Machine Vision and Applications (MVA). IEEE, 2021. https://github.com/kakitamedia/drone_dataset   
+[3] Chen, Kai, et al. "MMDetection: Open mmlab detection toolbox and benchmark." arXiv preprint arXiv:1906.07155 (2019). https://github.com/open-mmlab/mmdetection  
 [4] Piotr Dollar and Tsung-Yi Lin, COCO API, https://github.com/cocodataset/cocoapi  
