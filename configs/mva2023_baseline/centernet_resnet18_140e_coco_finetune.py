@@ -5,15 +5,15 @@ data_root = LIB_ROOT_DIR + '/data/'
 
 data = dict(
     train=dict(
-        ann_file=data_root + 'mva2023_sod4bird_train/split_train_coco.json',
+        ann_file=data_root + 'mva2023_sod4bird_train/annotations/split_train_coco.json',
         img_prefix=data_root + 'mva2023_sod4bird_train/images/',
     ),
     val=dict(
-        ann_file=data_root + 'mva2023_sod4bird_train/split_val_coco.json',
+        ann_file=data_root + 'mva2023_sod4bird_train/annotations/split_val_coco.json',
         img_prefix=data_root + 'mva2023_sod4bird_train/images/',
     ),
     test=dict(
-        ann_file=data_root + 'mva2023_sod4bird_train/split_val_coco.json',
+        ann_file=data_root + 'mva2023_sod4bird_train/annotations/split_val_coco.json',
         img_prefix=data_root + 'mva2023_sod4bird_train/images/',
     )
 )
