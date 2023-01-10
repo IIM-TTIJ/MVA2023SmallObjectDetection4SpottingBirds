@@ -39,10 +39,10 @@ data = dict(
         pipeline=train_pipeline
     ),
     val=dict(
-        ann_file=data_root + 'drone2021/annotation/split_val_coco.json',
+        ann_file=data_root + 'drone2021/annotations/split_val_coco.json',
     ),
     test=dict(
-        ann_file=data_root + 'drone2021/annotation/split_val_coco.json',
+        ann_file=data_root + 'drone2021/annotations/split_val_coco.json',
         samples_per_gpu=4,
     )
 )

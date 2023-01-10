@@ -87,6 +87,8 @@ year={2023}}
 This code was created with reference to MMDetection[3]. 
 OpenMMLab provides a [Colab tutorial](https://github.com/open-mmlab/mmdetection/blob/master/demo/MMDet_Tutorial.ipynb).
 If you are not familiar with MMDetection, please read its [tutorial](https://mmdetection.readthedocs.io/en/stable/) for how to modify the baseline code (e.g., replacing the detectors, backbones, learning rate, dataset and other hyperparameters in config files).
+Our modification from MMDetection are in configs/mva2023_baseline, mmdet/datasets/pipelines/transforms.py and mmdet/datasets/pipelines/loading.py.
+
 ### Installation
 
 We follow the [MMDetection Installation Website](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation)
@@ -108,8 +110,10 @@ We tested our code on `pytorch-1.10.2` and `pytorch-1.12.1`, please feel free to
 
 ```shell
 pip install -U openmim
-mim install mmcv-full
+mim install mmcv-full==1.6.0
 ```
+The mmcv-full version higher than 1.6.0 is not compatible with this baseline code.
+
 **Step 3.** Install our baseline code
 ```shell
 git clone https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4Birds.git
@@ -143,8 +147,8 @@ are also reported, so we keep it here.
 
 ### Commands to run the code
 
-We used CenterNet (backbone ResNet18) in the baseline and obtained mAP 47.3.
-With hard negative training for additional 20 epochs, mAP was improved to 51.0. 
+We used CenterNet (backbone ResNet18) in the baseline code and obtained mAP 47.3 (training: drone2021/split_train_coco.json,  test: drone2021/split_val_coco.json).
+With hard negative training for additional 20 epochs, mAP on drone2021/split_val_coco.json was improved to 51.0. 
 
 We have prepared the commands for conducting the distributed training and test in [`dist_train_test.sh`](dist_train_test.sh).
 
@@ -204,14 +208,15 @@ bash tools/dist_train.sh  configs/mva2023_baseline/centernet_resnet18_140e_coco_
 
 
 ###############################
-# Step 5: To generate the predictions for submission
+# Step 5: To generate the predictions for submission, the result will be saved in results.bbox.json.
 ###############################
 bash tools/dist_test.sh \
-    configs/mva2023_baseline/centernet_resnet18_140e_coco_finetune.py \
+    configs/mva2023_baseline/centernet_resnet18_140e_coco_inference.py \
     work_dirs/centernet_resnet18_140e_coco_finetune/latest.pth \
     2 \ 
     --format-only \
     --eval-options jsonfile_prefix=results
+
 
 _time=`date +%Y%m%d%H%M`
 mv results.bbox.json `submit/results_${_time}.json`
@@ -219,9 +224,10 @@ zip "submit/submit_${_time}.zip" `submit/results_${_time}.json`
 
 ```
 
-To submit your detection result, first rename your resulting file to `results.json` so that
-our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json` to a zip file (any name is OK, e.g., submit.zip). A sample submission file is provided at `submit/public_test_smaple_submission.zip`. 
 
+To submit your detection result, first rename your resulting file to `results.json` so that
+our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json` to a zip file (any name is OK, e.g., submit.zip). 
+The code in the last three lines of the above code automatically rename the resulting json file and generate the zip file for submission.
 
 ## References
 [1] Hank Chen, Awesome Tiny Object Detection, https://github.com/kuanhungchen/awesome-tiny-object-detection  
