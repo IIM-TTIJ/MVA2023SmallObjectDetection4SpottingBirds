@@ -146,12 +146,6 @@ With hard negative training for additional 20 epochs, mAP was improved to 51.0.
 
 We have prepared the commands for conducting the distributed training and test in [`dist_train_test.sh`](dist_train_test.sh).
 
-A sample results for submission is `smaple_submission.zip`. 
-To submit your detection result, first generate `results.json' (other name is not acceptable so that
-our Server can automatically evaluate your submission), then compress your `results.json' to a zip file (any name is OK, e.g., 
-submit.zip)
-
-
 
 ```shell
 #!/usr/bin/env bash
@@ -218,6 +212,11 @@ bash tools/dist_test.sh \
     --eval-options jsonfile_prefix=results
 
 ```
+
+
+To submit your detection result, first rename your resulting file to `results.json' so that
+our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json' to a zip file (any name is OK, e.g., submit.zip). A sample submission file is provided at `submit/public_test_smaple_submission.zip`. 
+
 
 ## References
 [1] Hank Chen, Awesome Tiny Object Detection, https://github.com/kuanhungchen/awesome-tiny-object-detection  
