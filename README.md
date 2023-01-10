@@ -109,8 +109,10 @@ We tested our code on `pytorch-1.10.2` and `pytorch-1.12.1`, please feel free to
 
 ```shell
 pip install -U openmim
-mim install mmcv-full
+mim install mmcv-full==1.6.0
 ```
+The mmcv-full version higher than 1.6.0 is not compatible with this baseline code.
+
 **Step 3.** Install our baseline code
 ```shell
 git clone https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4Birds.git
