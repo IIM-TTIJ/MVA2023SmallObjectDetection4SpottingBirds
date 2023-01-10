@@ -46,7 +46,7 @@ data
 The dataset is split into training / public test / private test sets. Participants can download the images and annotations of the training data, and the images of the public test data. The annotations of the public test data are hidden but the participants can obtain the evaluation score once their detection results are online submitted via the **CodaLab web platform**. Participants cannot access the private test images. The private test will be conducted manually by the challenge organizer. The trainig data includes an extended version of the publicly available data (train1) published in [4] and newly released data for this competition (train2).
 * Images and instances:
     * Train :
-        * Train1[[2]](https://github.com/kakitamedia/drone_dataset) (drone2021): Consists of approximately 50,000 images with about 60,000 annotated bird instances.
+        * Train1(modified based on [[2]](https://github.com/kakitamedia/drone_dataset)) (drone2021): Consists of approximately 50,000 images with about 60,000 annotated bird instances.
         * Train2 (mva2023_sod4bird_train): Consists of approximately 9,759 images with about 29,037 annotated bird instances.
     * Public test (mva2023_sod4bird_pub_test) : Consists of approximately 9,699 images with about 29,775 annotated bird instances.
     * Private test (mva2023_sod4bird_private_test): Consists of approximately 10,000 images with about 30,000 annotated bird instances.
