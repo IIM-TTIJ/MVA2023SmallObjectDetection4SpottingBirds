@@ -4,7 +4,7 @@
 
 
 This repository includes the baseline code used in our [challenge](http://www.mva-org.jp/mva2023/challenge) .
-It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is downloaded from [here](https://github.com/open-mmlab/mmdetection/releases/tag/v2.24.1).
+It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is downloaded from [here](https://github.com/open-mmlab/mmdetection/releases/tag/v2.24.1)).
 
 
 ### Important dates
@@ -162,13 +162,13 @@ export MKL_NUM_THREADS=1
 GPU_NUM=2
 
 ###############################
-# Step 1: normal training
+# Step 1: normal training on data/drone2021
 ###############################
 bash tools/dist_train.sh  configs/drone/centernet_resnet18_140e_coco.py $GPU_NUM
 
 
 ###############################
-# Step 2: Generate hard negative predictions
+# Step 2: Generate predictions on data/drone2021 to select hard negatives examples
 ###############################
 CONFIG=configs/drone/centernet_resnet18_140e_coco_inference.py
 CHECKPOINT=work_dirs/centernet_resnet18_140e_coco/latest.pth
@@ -196,21 +196,26 @@ python -m torch.distributed.launch \
 
 
 ###############################
-# Step 3: Hard negative training
+# Step 3: Hard negative training  on data/drone2021
 ###############################
 bash tools/dist_train.sh  configs/drone/centernet_resnet18_140e_coco_hard_negative_training.py $GPU_NUM
 
 
 ###############################
-# Step 4: To generate the prediction for submission
+# Step 4:fine-tuning on data/mva2023_sod4bird_train
+###############################
+bash tools/dist_train.sh  configs/drone/centernet_resnet18_140e_coco_finetune.py $GPU_NUM
+
+
+###############################
+# Step 5: To generate the predictions for submission
 ###############################
 bash tools/dist_test.sh \
-    configs/drone/centernet_resnet18_140e_coco_hard_negative_training.py \
-    work_dirs/centernet_resnet18_140e_coco_hard_negative_training/latest.pth \
-    2 \ # 2 gpus
+    configs/drone/centernet_resnet18_140e_coco_finetune.py \
+    work_dirs/centernet_resnet18_140e_coco_finetune/latest.pth \
+    2 \ 
     --format-only \
     --eval-options jsonfile_prefix=results
-
 
 ```
 
