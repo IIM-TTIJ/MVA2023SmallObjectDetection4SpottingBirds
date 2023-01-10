@@ -203,7 +203,7 @@ bash tools/dist_train.sh  configs/mva2023_baseline/centernet_resnet18_140e_coco_
 
 
 ###############################
-# Step 5: To generate the predictions for submission
+# Step 5: To generate the predictions for submission, the result will be saved in results.bbox.json.
 ###############################
 bash tools/dist_test.sh \
     configs/mva2023_baseline/centernet_resnet18_140e_coco_finetune.py \
@@ -212,15 +212,17 @@ bash tools/dist_test.sh \
     --format-only \
     --eval-options jsonfile_prefix=results
 
+
 _time=`date +%Y%m%d%H%M`
 mv results.bbox.json `submit/results_${_time}.json`
 zip "submit/submit_${_time}.zip" `submit/results_${_time}.json`
 
 ```
 
+
 To submit your detection result, first rename your resulting file to `results.json` so that
 our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json` to a zip file (any name is OK, e.g., submit.zip). A sample submission file is provided at `submit/public_test_smaple_submission.zip`. 
-
+The code in the last three lines of the above code automatically rename the resulting json file and generate the zip file for submission.
 
 ## References
 [1] Hank Chen, Awesome Tiny Object Detection, https://github.com/kuanhungchen/awesome-tiny-object-detection  
