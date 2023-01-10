@@ -221,7 +221,7 @@ zip "submit/submit_${_time}.zip" `submit/results_${_time}.json`
 
 
 To submit your detection result, first rename your resulting file to `results.json` so that
-our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json` to a zip file (any name is OK, e.g., submit.zip). A sample submission file is provided at `submit/public_test_smaple_submission.zip`. 
+our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json` to a zip file (any name is OK, e.g., submit.zip). 
 The code in the last three lines of the above code automatically rename the resulting json file and generate the zip file for submission.
 
 ## References
