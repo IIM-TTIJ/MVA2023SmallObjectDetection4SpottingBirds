@@ -1,4 +1,4 @@
-from tti.tti_conf import LIB_ROOT_DIR
+from set_lib_dir import LIB_ROOT_DIR
 _base_ = './centernet_resnet18_140e_coco.py'
 data_root = LIB_ROOT_DIR + '/data/'
 
