@@ -214,8 +214,8 @@ bash tools/dist_test.sh \
 ```
 
 
-To submit your detection result, first rename your resulting file to `results.json' so that
-our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json' to a zip file (any name is OK, e.g., submit.zip). A sample submission file is provided at `submit/public_test_smaple_submission.zip`. 
+To submit your detection result, first rename your resulting file to `results.json` so that
+our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json` to a zip file (any name is OK, e.g., submit.zip). A sample submission file is provided at `submit/public_test_smaple_submission.zip`. 
 
 
 ## References
