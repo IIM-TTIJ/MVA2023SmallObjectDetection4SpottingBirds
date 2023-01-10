@@ -85,6 +85,7 @@ year={2023}}
 
 This code was created with reference to MMDetection[3]. 
 OpenMMLab provides a [Colab tutorial](https://github.com/open-mmlab/mmdetection/blob/master/demo/MMDet_Tutorial.ipynb).
+If you are not familiar with MMDetection, please read its [tutorial](https://mmdetection.readthedocs.io/en/stable/) for how to modify the baseline code (e.g., replacing the detectors, backbones, learning rate, dataset and other hyperparameters in config files).
 ### Installation
 
 We follow the [MMDetection Installation Website](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation)
@@ -216,7 +217,6 @@ mv results.bbox.json `submit/results_${_time}.json`
 zip "submit/submit_${_time}.zip" `submit/results_${_time}.json`
 
 ```
-
 
 To submit your detection result, first rename your resulting file to `results.json` so that
 our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json` to a zip file (any name is OK, e.g., submit.zip). A sample submission file is provided at `submit/public_test_smaple_submission.zip`. 
