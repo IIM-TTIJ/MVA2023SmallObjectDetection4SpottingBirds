@@ -86,6 +86,8 @@ year={2023}}
 This code was created with reference to MMDetection[3]. 
 OpenMMLab provides a [Colab tutorial](https://github.com/open-mmlab/mmdetection/blob/master/demo/MMDet_Tutorial.ipynb).
 If you are not familiar with MMDetection, please read its [tutorial](https://mmdetection.readthedocs.io/en/stable/) for how to modify the baseline code (e.g., replacing the detectors, backbones, learning rate, dataset and other hyperparameters in config files).
+Our modification from MMDetection are in configs/mva2023_baseline, mmdet/datasets/pipelines/transforms.py and mmdet/datasets/pipelines/loading.py.
+
 ### Installation
 
 We follow the [MMDetection Installation Website](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/get_started.md/#Installation)
