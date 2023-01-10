@@ -5,7 +5,7 @@
 
 This repository includes the baseline code used in our [challenge](http://www.mva-org.jp/mva2023/challenge) .
 It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is downloaded from [here](https://github.com/open-mmlab/mmdetection/releases/tag/v2.24.1).
-For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetection), 
+
 
 ### Important dates
 |  Challenges Event  |  Date (always 23:59 PST)  |
@@ -21,7 +21,7 @@ For the latest version of [MMDetection](https://github.com/open-mmlab/mmdetectio
 
 ## News
 [2022/12/29] Important dates, Links and References are available.  
-[2022/12/23] Our code is available.
+
 
 ## Dataset
 **[Download Link(TBA)]()**  
