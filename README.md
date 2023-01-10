@@ -47,9 +47,9 @@ The dataset is split into training / public test / private test sets. Participan
 * Images and instances:
     * Train :
         * Train1[[2]](https://github.com/kakitamedia/drone_dataset) (drone2021): Consists of approximately 50,000 images with about 60,000 annotated bird instances.
-        * Train2 (mva2023_sod4bird_train): Consists of approximately 10,000 images with about 40,000 annotated bird instances.
-    * Public test (mva2023_sod4bird_pub_test) : Consists of approximately 10,000 images with about 40,000 annotated bird instances.
-    * Private test (mva2023_sod4bird_private_test): Consists of approximately 10,000 images with about 40,000 annotated bird instances.
+        * Train2 (mva2023_sod4bird_train): Consists of approximately 9,759 images with about 29,037 annotated bird instances.
+    * Public test (mva2023_sod4bird_pub_test) : Consists of approximately 9,699 images with about 29,775 annotated bird instances.
+    * Private test (mva2023_sod4bird_private_test): Consists of approximately 10,000 images with about 30,000 annotated bird instances.
 * Data format :
     * Input : Image
     * Annotation : COCO format
@@ -117,7 +117,7 @@ pip install -v -e .
 
 
 ### Dataset 
-**Download Link(TBA)**  
+**[Download Link(TBA)]()**  
 Please put it at `data/` after you download and uncompress it.
 
 Directory Structure
