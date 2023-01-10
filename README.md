@@ -11,7 +11,7 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 |  Challenges Event  |  Date (always 23:59 PST)  |
 | ---- | ---- |
 | [Site online](http://www.mva-org.jp/mva2023/challenge) | 2022.12.8 |
-| Release of training data and public test data | 2023.1.9 |
+| Release of training data and public test data ([link](https://drive.google.com/drive/folders/1vTHiIelagbzPO795yhOdNUFh9u2XxZP-?usp=share_link)) | 2023.1.9 |
 | Public test server online | 2023.1.10 |
 | Public test server closed | 2023.4.14 |
 | Fact sheets, code/executable submission deadline | 2023.4.21 |
@@ -20,11 +20,12 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 | Camera ready due (only Research Category) | 2023.7.4 |
 
 ## News
+[2023/01/10] Released dataset   
 [2022/12/29] Important dates, Links and References are available.  
 
 
 ## Dataset
-**[Download Link(TBA)]()**  
+**[Download Link](https://drive.google.com/drive/folders/1vTHiIelagbzPO795yhOdNUFh9u2XxZP-?usp=share_link)**  
 
 Dataset Directory Structure
 ```
@@ -37,16 +38,16 @@ data
  │  └ annotations
  ├ mva2023_sod4bird_pub_test
  │  ├ images
- │  └ annotations(empty)
+ │  └ annotations(including an empty annotation file)
  └ mva2023_sod4bird_private_test
     ├ images(empty)
     └ annotations(empty)
 ```
 
-The dataset is split into training / public test / private test sets. Participants can download the images and annotations of the training data, and the images of the public test data. The annotations of the public test data are hidden but the participants can obtain the evaluation score once their detection results are online submitted via the **CodaLab web platform**. Participants cannot access the private test images. The private test will be conducted manually by the challenge organizer. The trainig data includes an extended version of the publicly available data (train1) published in [4] and newly released data for this competition (train2).
+The dataset is split into training / public test / private test sets. Participants can download the images and annotations of the training data, and the images of the public test data. The annotations of the public test data are hidden but the participants can obtain the evaluation score once their detection results are online submitted via the [**CodaLab web platform**](https://codalab.lisn.upsaclay.fr/competitions/9594). Participants cannot access the private test images. The private test will be conducted manually by the challenge organizer. The trainig data includes an extended version of the publicly available data (train1) published in [4] and newly released data for this competition (train2).
 * Images and instances:
     * Train :
-        * Train1(modified based on [[2]](https://github.com/kakitamedia/drone_dataset)) (drone2021): Consists of approximately 50,000 images with about 60,000 annotated bird instances.
+        * Train1(modified based on [[2]](https://github.com/kakitamedia/drone_dataset)) (drone2021): Consists of approximately 48,395 images with about 62,106 annotated bird instances.
         * Train2 (mva2023_sod4bird_train): Consists of approximately 9,759 images with about 29,037 annotated bird instances.
     * Public test (mva2023_sod4bird_pub_test) : Consists of approximately 9,699 images with about 29,775 annotated bird instances.
     * Private test (mva2023_sod4bird_private_test): Consists of approximately 10,000 images with about 30,000 annotated bird instances.
@@ -59,8 +60,8 @@ After the challenge, the public test evaluation server will continue to run on C
 
 ## Links
 * [MVA Official Competition Site](http://www.mva-org.jp/mva2023/challenge)
-* CodaLab (to be announced)
-* Competiton train and public test Dataset Download Link (to be announced)
+* [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/9594)
+* [Competiton train and public test Dataset Download Link](https://drive.google.com/drive/folders/1vTHiIelagbzPO795yhOdNUFh9u2XxZP-?usp=share_link)
 
 ## Citation
 
@@ -118,7 +119,7 @@ pip install -v -e .
 
 
 ### Dataset 
-**[Download Link(TBA)]()**  
+**[Download Link](https://drive.google.com/drive/folders/1vTHiIelagbzPO795yhOdNUFh9u2XxZP-?usp=share_link)**  
 Please put it at `data/` after you download and uncompress it.
 
 Directory Structure
