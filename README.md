@@ -11,7 +11,7 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 |  Challenges Event  |  Date (always 23:59 PST)  |
 | ---- | ---- |
 | [Site online](http://www.mva-org.jp/mva2023/challenge) | 2022.12.8 |
-| Release of training data and public test data ([link](https://drive.google.com/drive/folders/1vTHiIelagbzPO795yhOdNUFh9u2XxZP-?usp=share_link)) | 2023.1.9 |
+| Release of training data and public test data | 2023.1.9 |
 | Public test server online | 2023.1.10 |
 | Public test server closed | 2023.4.14 |
 | Fact sheets, code/executable submission deadline | 2023.4.21 |
