@@ -52,15 +52,17 @@ bash tools/dist_train.sh  configs/mva2023_baseline/centernet_resnet18_140e_coco_
 
 
 ###############################
-# Step 5: To generate the predictions for submission
+# Step 5: To generate the predictions for submission, the result will be saved in results.bbox.json.
 ###############################
 bash tools/dist_test.sh \
-    configs/mva2023_baseline/centernet_resnet18_140e_coco_finetune.py \
+    configs/mva2023_baseline/centernet_resnet18_140e_coco_inference.py \
     work_dirs/centernet_resnet18_140e_coco_finetune/latest.pth \
     2 \ 
     --format-only \
     --eval-options jsonfile_prefix=results
 
+
 _time=`date +%Y%m%d%H%M`
 mv results.bbox.json `submit/results_${_time}.json`
 zip "submit/submit_${_time}.zip" `submit/results_${_time}.json`
+
