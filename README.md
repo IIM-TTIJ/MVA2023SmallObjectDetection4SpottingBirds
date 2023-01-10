@@ -146,8 +146,8 @@ are also reported, so we keep it here.
 
 ### Commands to run the code
 
-We used CenterNet (backbone ResNet18) in the baseline and obtained mAP 47.3.
-With hard negative training for additional 20 epochs, mAP was improved to 51.0. 
+We used CenterNet (backbone ResNet18) in the baseline code and obtained mAP 47.3 (training: drone2021/split_train_coco.json,  test: drone2021/split_val_coco.json).
+With hard negative training for additional 20 epochs, mAP on drone2021/split_val_coco.json was improved to 51.0. 
 
 We have prepared the commands for conducting the distributed training and test in [`dist_train_test.sh`](dist_train_test.sh).
 
