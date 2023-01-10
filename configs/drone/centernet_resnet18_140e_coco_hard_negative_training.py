@@ -1,6 +1,6 @@
 from tti.tti_conf import LIB_ROOT_DIR
 _base_ = './centernet_resnet18_140e_coco.py'
-data_root = LIB_ROOT_DIR + '/data/drone/'
+data_root = LIB_ROOT_DIR + '/data/'
 
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
@@ -32,16 +32,18 @@ train_pipeline = [
     dict(type='Collect', keys=['img', 'gt_bboxes', 'gt_labels'])
 ]
 
+
 data = dict(
     train=dict(
         hard_negative_file=LIB_ROOT_DIR + '/work_dirs/centernet_resnet18_140e_coco/train_coco_hard_negative.json',  # ---
         pipeline=train_pipeline
     ),
     val=dict(
-        ann_file=data_root + 'annotation/split_val_coco.json',
+        ann_file=data_root + 'drone2021/annotation/split_val_coco.json',
     ),
     test=dict(
-        ann_file=data_root + 'annotation/split_val_coco.json',
+        ann_file=data_root + 'drone2021/annotation/split_val_coco.json',
+        samples_per_gpu=4,
     )
 )
 

@@ -1,7 +1,7 @@
 from tti.tti_conf import LIB_ROOT_DIR
 
 dataset_type = 'DroneDataset'  
-data_root = LIB_ROOT_DIR + '/data/drone/'
+data_root = LIB_ROOT_DIR + '/data/'
 
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
@@ -64,17 +64,17 @@ data = dict(
     workers_per_gpu=2,
     train=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotation/split_train_coco.json',
-        img_prefix=data_root + 'drone_dataset/',
+        ann_file=data_root + 'drone2021/annotation/split_train_coco.json',
+        img_prefix=data_root + 'drone2021/images/',
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotation/split_val_coco.json',
-        img_prefix=data_root + 'drone_dataset/',
+        ann_file=data_root + 'drone2021/annotation/split_val_coco.json',
+        img_prefix=data_root + 'drone2021/images/',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotation/split_val_coco.json',
-        img_prefix=data_root + 'drone_dataset/',
+        ann_file=data_root + 'drone2021/annotation/split_val_coco.json',
+        img_prefix=data_root + 'drone2021/images/',
         pipeline=test_pipeline))
 evaluation = dict(interval=1, metric='bbox')
