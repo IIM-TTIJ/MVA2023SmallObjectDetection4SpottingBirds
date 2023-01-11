@@ -1,6 +1,6 @@
-# MVA2023 - Small Object Detection for Birds Challenge 
+# MVA2023 - Small Object Detection Challenge for Spotting Birds
 
-<img src="http://www.mva-org.jp/mva2023/data/uploads/bird/samples-1.pdf.jpg" alt="mva-sod4b-sample" title="mva2023-ChallengeOnSmallObjectDetection4Birds-sample">
+<img src="http://www.mva-org.jp/mva2023/data/uploads/bird/samples-1.pdf.jpg" alt="mva-sod4b-sample" title="mva2023-ChallengeOnSmallObjectDetection4SpottingBirds-sample">
 
 
 This repository includes the baseline code used in our [challenge](http://www.mva-org.jp/mva2023/challenge) .
@@ -78,17 +78,18 @@ However, participants who use external datasets must indicate the source of the 
 
 ```
 @misc{sodbchallenge2023misc,
-title={Small Object Detection for Birds Challenge 2023},
-author={Yuki Kondo, Norimichi Ukita, Takayuki Yamaguchi},
-howpublished={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
-year={2023}}
+  title={MVA2023 Small Object Detection Challenge for Spotting Birds},
+  author={Yuki Kondo, Norimichi Ukita, Takayuki Yamaguchi},
+  howpublished={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
+  year={2023}}
 
-@inproceedings{sodbchallenge2023},
-title={Small Object Detection for Birds Challenge 2023},
-author={Yuki Kondo, Norimichi Ukita, Takayuki Yamaguchi, [Winners]},
-booktitle={International Conference on Machine Vision and Applications},
-note={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
-year={2023}}
+Note: Not yet published and this title is tentative.
+@inproceedings{sodbchallenge2023,
+  title={MVA2023 Small Object Detection Challenge for Spotting Birds},
+  author={Yuki Kondo, Norimichi Ukita, Takayuki Yamaguchi, [Winners]},
+  booktitle={International Conference on Machine Vision and Applications},
+  note={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
+  year={2023}}
 
 ```
 
