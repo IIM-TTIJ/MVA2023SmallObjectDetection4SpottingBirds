@@ -240,6 +240,9 @@ To submit your detection result, first rename your resulting file to `results.js
 our Server can automatically evaluate your submission (other name is not acceptable), then compress your `results.json` to a zip file (any name is OK, e.g., submit.zip). 
 The code in the last three lines of the above code automatically rename the resulting json file and generate the zip file for submission.
 
+We have already uploaded a sample submission <a href="https://drive.google.com/drive/folders/1X7J2QQbUCYpXTrlNc-MIR9XS4kWMb0KN?usp=share_link">here</a> for your reference.
+
+
 ## References
 [1] Hank Chen, Awesome Tiny Object Detection, https://github.com/kuanhungchen/awesome-tiny-object-detection  
 [2] Fujii, Sanae, Kazutoshi Akita, and Norimichi Ukita. "Distant Bird Detection for Safe Drone Flight and Its Dataset." 2021 17th International Conference on Machine Vision and Applications (MVA). IEEE, 2021. https://github.com/kakitamedia/drone_dataset   
