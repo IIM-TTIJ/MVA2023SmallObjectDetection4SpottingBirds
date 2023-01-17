@@ -1,4 +1,5 @@
 from set_lib_dir import LIB_ROOT_DIR
+import os
 _base_ = './centernet_resnet18_140e_coco.py'
 data_root = LIB_ROOT_DIR + '/data/'
 
@@ -26,4 +27,5 @@ lr_config = dict(
     step=[15, 18])
 runner = dict(max_epochs=20)
 evaluation = dict(interval=20, metric='bbox')
-load_from = LIB_ROOT_DIR + '/work_dirs/centernet_resnet18_140e_coco_hard_negative_training/latest.pth'
+load_from = LIB_ROOT_DIR + 'work_dirs/centernet_resnet18_140e_coco/latest.pth'
+checkpoint_config = dict(interval=1)
