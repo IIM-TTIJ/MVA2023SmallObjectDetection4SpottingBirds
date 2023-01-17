@@ -79,33 +79,19 @@ However, participants who use external datasets must indicate the source of the 
 ## Organizers
   
 ### Technical Event Chair
-<p style="text-indent:1em;">
-Norimichi Ukita (Toyota Technological Institute)
-</p>
-<p style="text-indent:1em;">
-Yuki Kondo (TOYOTA MOTOR CORPORATION)
-</p>
+Norimichi Ukita (Toyota Technological Institute)  
+Yuki Kondo (TOYOTA MOTOR CORPORATION)  
 
 ### Staff
-<p style="text-indent:1em;">
 Kaikai Zhao (Toyota Technological Institute)  
-</p>
-<p style="text-indent:1em;">
-Riku Miyata (Toyota Technological Institute)   
-</p>
-<p style="text-indent:1em;">
+Riku Miyata (Toyota Technological Institute)  
 Kazutoshi Akita (Toyota Technological Institute)  
-</p>
   
 ### Contributor
-<p style="text-indent:1em;">
 Takayuki Yamaguchi (Iwate Agricultural Research Center)  
-</p>
   
 ### Adviser
-<p style="text-indent:1em;">
 Masatsugu Kidode (Nara Institute of Science and Technology)  
-</p>
   
 ## Citation
 
