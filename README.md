@@ -20,7 +20,7 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 | Camera ready due (only Research Category) | 2023.7.4 |
 
 ## News
-[2023/01/17] Fixed critical bugs   
+[2023/01/17] **Fixed critical bugs**
 [2023/01/10] Released dataset   
 [2022/12/29] Important dates, Links and References are available.  
 
@@ -74,7 +74,39 @@ However, participants who use external datasets must indicate the source of the 
 * [MVA Official Competition Site](http://www.mva-org.jp/mva2023/challenge)
 * [CodaLab](https://codalab.lisn.upsaclay.fr/competitions/9594)
 * [Competiton train and public test Dataset Download Link](https://drive.google.com/drive/folders/1vTHiIelagbzPO795yhOdNUFh9u2XxZP-?usp=share_link)
+  
+  
+## Organizers
+  
+### Technical Event Chair
+<p style="text-indent:1em;">
+Norimichi Ukita (Toyota Technological Institute)
+</p>
+<p style="text-indent:1em;">
+Yuki Kondo (TOYOTA MOTOR CORPORATION)
+</p>
 
+### Staff
+<p style="text-indent:1em;">
+Kaikai Zhao (Toyota Technological Institute)  
+</p>
+<p style="text-indent:1em;">
+Riku Miyata (Toyota Technological Institute)   
+</p>
+<p style="text-indent:1em;">
+Kazutoshi Akita (Toyota Technological Institute)  
+</p>
+  
+### Contributor
+<p style="text-indent:1em;">
+Takayuki Yamaguchi (Iwate Agricultural Research Center)  
+</p>
+  
+### Adviser
+<p style="text-indent:1em;">
+Masatsugu Kidode (Nara Institute of Science and Technology)  
+</p>
+  
 ## Citation
 
 ```
@@ -95,7 +127,8 @@ Note: Not yet published and this title is tentative.
 ```
 
 
-## About baseline code
+# About baseline code
+
 
 This code was created with reference to MMDetection[3]. 
 OpenMMLab provides a [Colab tutorial](https://github.com/open-mmlab/mmdetection/blob/master/demo/MMDet_Tutorial.ipynb).
