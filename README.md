@@ -20,7 +20,7 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 | Camera ready due (only Research Category) | 2023.7.4 |
 
 ## News
-[2023/01/17] **Fixed critical bugs**
+[2023/01/17] **Fixed critical bugs**  
 [2023/01/10] Released dataset   
 [2022/12/29] Important dates, Links and References are available.  
 
