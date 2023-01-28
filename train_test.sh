@@ -59,10 +59,10 @@ echo "Step 5: To generate the predictions for submission, the result will be sav
 echo "###############################"
 bash tools/test.sh configs/mva2023_baseline/centernet_resnet18_140e_coco_inference.py work_dirs/centernet_resnet18_140e_coco_hard_negative_training/latest.pth --format-only --eval-options jsonfile_prefix=results
 
-mkdir -p submit
 _time=`date +%Y%m%d%H%M`
-SUBMIT_FILE=`echo ./submit/results_${_time}.json`
-SUBMIT_ZIP_FILE=`echo ${SUBMIT_FILE//.json/.zip}`
+mkdir -p submit/${_time}
+SUBMIT_FILE=`echo ./submit/${_time}/results.json`
+SUBMIT_ZIP_FILE=`echo ${SUBMIT_FILE//results.json/submit.zip}`
 mv ./results.bbox.json $SUBMIT_FILE
 zip $SUBMIT_ZIP_FILE $SUBMIT_FILE
 
