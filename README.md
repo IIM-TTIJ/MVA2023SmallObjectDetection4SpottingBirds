@@ -148,8 +148,8 @@ The mmcv-full version higher than 1.6.0 is not compatible with this baseline cod
 
 **Step 3.** Install our baseline code
 ```shell
-git clone https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4Birds.git
-cd MVA2023BirdDetection
+git clone https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4SpottingBirds.git
+cd MVA2023SmallObjectDetection4SpottingBirds
 pip install -v -e .
 ```
 
