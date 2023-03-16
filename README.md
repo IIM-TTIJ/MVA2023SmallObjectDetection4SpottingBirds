@@ -100,7 +100,7 @@ Masatsugu Kidode (Nara Institute of Science and Technology)
 @misc{sodbchallenge2023misc,
   title={{MVA2023 Small Object Detection Challenge for Spotting Birds}},
   author={Yuki Kondo and Norimichi Ukita and Takayuki Yamaguchi},
-  note={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
+  note={\url{https://www.mva-org.jp/mva2023/challenge}},
   year={2023}}
 
 Note: Not yet published and this title is tentative.
@@ -108,7 +108,7 @@ Note: Not yet published and this title is tentative.
   title={{MVA2023 Small Object Detection Challenge for Spotting Birds}},
   author={Yuki Kondo and Norimichi Ukita and Takayuki Yamaguchi, [Winners]},
   booktitle={International Conference on Machine Vision and Applications},
-  note={\url{https://www.mva-org.jp/mva2023/SODchallenge}},
+  note={\url{https://www.mva-org.jp/mva2023/challenge}},
   year={2023}}
 
 ```
