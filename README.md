@@ -14,7 +14,7 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 | Release of training data and public test data | 2023.1.9 |
 | Public test server online | 2023.1.10 |
 | Public test server closed | 2023.4.14 |
-| Fact sheets, code/executable submission deadline | 2023.4.21 |
+| code/executable submission deadline | 2023.4.21 |
 | Paper submission deadline (only Research Category) | 2023.5.7 |
 | Preliminary private test results release to the participants | 2023.6.15 |
 | Camera ready due (only Research Category) | 2023.7.4 |
