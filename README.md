@@ -20,7 +20,7 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 | Camera ready due (only Research Category) | 2023.7.4 |
 
 ## News
-[April 6, 2023] The papers submitted by Research Category winners will be included in the IEEE Xplore and the IEICE Proceedings Series as "MVA Workshop on Small Object Detection Challenge for Spotting Birds2023 proceedings". Also, the summary paper of this challenge by the Research Category winners and the organizer will be included in the IEICE Proceedings Series as "MVA Workshop on Small Object Detection Challenge for Spotting Birds2023 proceedings".
+[April 6, 2023] The papers submitted by Research Category winners will be included in the IEEE Xplore and the IEICE Proceedings Series as "MVA Workshop on Small Object Detection Challenge for Spotting Birds2023 proceedings". Also, the summary paper of this challenge by the Research Category winners and the organizer will be included in the IEICE Proceedings Series as "MVA Workshop on Small Object Detection Challenge for Spotting Birds2023 proceedings".  
 [February 10, 2023] Currently, some inconsistencies, such as resolution discrepancies, have been identified with respect to the annotation data in the drone2021 dataset. We are performing a comprehensive consistency check of the annotations. Please be patient for a while.  
 [February 17, 2023] **Fixed critical bugs**  
 [January 10, 2023] Released dataset   
