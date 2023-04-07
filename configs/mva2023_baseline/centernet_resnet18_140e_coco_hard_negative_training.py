@@ -36,6 +36,7 @@ train_pipeline = [
 
 data = dict(
     train=dict(
+        pipeline=train_pipeline,
         hard_negative_file=LIB_ROOT_DIR + '/work_dirs/centernet_resnet18_140e_coco/train_coco_hard_negative.json',  # ---
         ann_file=data_root + 'mva2023_sod4bird_train/annotations/split_train_coco.json',
         img_prefix=data_root + 'mva2023_sod4bird_train/images/',
