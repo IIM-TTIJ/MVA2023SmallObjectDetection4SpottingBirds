@@ -196,7 +196,8 @@ class DroneDataset(CocoDataset):
             results['proposals'] = self.proposals[idx]
         # -----------------------
         if self.hard_negatives is not None:
-            results['hard_negatives'] = self.hard_negatives[idx]  # array, x1, y1, x2, y2
+            img_id = self.data_infos[idx]['id']  #  get the image_id from idx, fixed by huoda
+            results['hard_negatives'] = self.hard_negatives[img_id]  # array, x1, y1, x2, y2
         # -----------------------
         self.pre_pipeline(results)
         return self.pipeline(results)
