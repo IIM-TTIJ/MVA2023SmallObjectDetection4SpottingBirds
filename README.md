@@ -20,6 +20,7 @@ It is built on MMDetection V2.24.1 (released on Apr 30, 2022, source code is dow
 | Camera ready due (only Research Category) | 2023.7.4 |
 
 ## News
+[May 31, 2023] Updated citation.  
 [April 6, 2023] The papers submitted by Research Category winners will be included in the IEEE Xplore and the IEICE Proceedings Series as "MVA Workshop on Small Object Detection Challenge for Spotting Birds2023 proceedings". Also, the summary paper of this challenge by the Research Category winners and the organizer will be included in the IEICE Proceedings Series as "MVA Workshop on Small Object Detection Challenge for Spotting Birds2023 proceedings".  
 [February 10, 2023] Currently, some inconsistencies, such as resolution discrepancies, have been identified with respect to the annotation data in the drone2021 dataset. We are performing a comprehensive consistency check of the annotations. Please be patient for a while.  
 [February 17, 2023] **Fixed critical bugs**  
@@ -98,22 +99,29 @@ Masatsugu Kidode (Nara Institute of Science and Technology)
 ## Citation
 
 ```
+Note: Not yet published and booktitle is tentative.
+@inproceedings{mva2023_sod_challenge,
+  title={{MVA2023 Small Object Detection Challenge for Spotting Birds}},
+  author={Yuki Kondo and Norimichi Ukita and Takayuki Yamaguchi and Hao-Yu Hou and Mu-Yi Shen and Chia-Chi Hsu and En-Ming Huang and Yu-Chen Huang and Yu-Cheng Xia and Chien-Yao Wang and Chun-Yi Lee and Da Huo and Tingwei Liu and Yosuke Shinya and Guang Liang and Syusuke Yasui},
+  booktitle={2023 18th International Conference on Machine Vision and Applications (MVA) Workshop},
+  note={\url{https://www.mva-org.jp/mva2023/challenge}},
+  year={2023}}
+```
+```
+@software{baselinecode_mva2023_sod_challenge,
+  title={{MVA2023SmallObjectDetection4SpottingBirds by IIM-TTIJ}},
+  author={Kaikai Zhao and Riku Miyata and Yuki Kondo and Kazutoshi Akita},
+  license={Apache-2.0},
+  url={\url{https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4SpottingBirds}},
+  year={2023}}
+```
+```
 @misc{sodbchallenge2023misc,
   title={{MVA2023 Small Object Detection Challenge for Spotting Birds}},
   author={Yuki Kondo and Norimichi Ukita and Takayuki Yamaguchi},
-  note={\url{https://www.mva-org.jp/mva2023/challenge}},
+  howpublished={\url{https://www.mva-org.jp/mva2023/challenge}},
   year={2023}}
-
-Note: Not yet published and this title is tentative.
-@inproceedings{sodbchallenge2023,
-  title={{MVA2023 Small Object Detection Challenge for Spotting Birds}},
-  author={Yuki Kondo and Norimichi Ukita and Takayuki Yamaguchi, [Winners]},
-  booktitle={International Conference on Machine Vision and Applications},
-  note={\url{https://www.mva-org.jp/mva2023/challenge}},
-  year={2023}}
-
 ```
-
 
 # About baseline code
 
