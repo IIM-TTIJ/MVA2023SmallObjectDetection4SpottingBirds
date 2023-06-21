@@ -108,11 +108,10 @@ Note: Not yet published and booktitle is tentative.
   year={2023}}
 ```
 ```
-@software{baselinecode_mva2023_sod_challenge,
-  title={{MVA2023SmallObjectDetection4SpottingBirds by IIM-TTIJ}},
+@misc{baselinecode_mva2023_sod_challenge,
+  title={{Baseline code for SOD4SB by IIM-TTIJ}},
   author={Kaikai Zhao and Riku Miyata and Yuki Kondo and Kazutoshi Akita},
-  license={Apache-2.0},
-  url={\url{https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4SpottingBirds}},
+  howpublished={\url{https://github.com/IIM-TTIJ/MVA2023SmallObjectDetection4SpottingBirds}},
   year={2023}}
 ```
 ```
