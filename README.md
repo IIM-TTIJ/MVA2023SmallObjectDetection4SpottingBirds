@@ -102,7 +102,7 @@ Masatsugu Kidode (Nara Institute of Science and Technology)
 Note: Not yet published and booktitle is tentative.
 @inproceedings{mva2023_sod_challenge,
   title={{MVA2023 Small Object Detection Challenge for Spotting Birds: Dataset, Methods, and Results}},
-  author={Yuki Kondo and Norimichi Ukita and Takayuki Yamaguchi and Hao-Yu Hou and Mu-Yi Shen and Chia-Chi Hsu and En-Ming Huang and Yu-Chen Huang and Yu-Cheng Xia and Chien-Yao Wang and Chun-Yi Lee and Da Huo and Marc A. Kastner and Tingwei Liu and Yasutomo Kawanishi and Takatsugu Hirayama and Takahiro Komamizu and Ichiro Ide and Yosuke Shinya and Guang Liang and Syusuke Yasui},
+  author={Yuki Kondo and Norimichi Ukita and Takayuki Yamaguchi and Hao-Yu Hou and Mu-Yi Shen and Chia-Chi Hsu and En-Ming Huang and Yu-Chen Huang and Yu-Cheng Xia and Chien-Yao Wang and Chun-Yi Lee and Da Huo and Marc A. Kastner and Tingwei Liu and Yasutomo Kawanishi and Takatsugu Hirayama and Takahiro Komamizu and Ichiro Ide and Yosuke Shinya and Xinyao Liu and Guang Liang and Syusuke Yasui},
   booktitle={2023 18th International Conference on Machine Vision and Applications (MVA)},
   note={\url{https://www.mva-org.jp/mva2023/challenge}},
   year={2023}}
